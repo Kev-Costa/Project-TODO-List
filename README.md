@@ -26,6 +26,14 @@ Este projeto foi desenvolvido com o objetivo de reforçar conceitos fundamentais
 - **Contrato de Ordenação:** Interface `Comparable` (`compareTo`)
 - **Datas:** API `java.time.LocalDate`
 
+### 🌐 Frontend (`/frontend`)
+- **Estruturação & Estilo:** HTML5 & CSS3 (Layout responsivo com Flexbox)
+- **Lógica e Dinamismo:** JavaScript (ES6+, Manipulação do DOM, Callbacks, Event Listeners)
+- **Funcionalidades:**
+    - CRUD Completo (Criação, Leitura, Edição e Exclusão) em memória.
+    - Rebalanceamento automático de exibição por ordem de prioridade (1 a 5).
+    - Filtro dinâmico por Status (`TODO`, `DOING`, `DONE`).
+    - Contadores em tempo real para cada Status.
 ---
 
 ## 📐 Estrutura do Projeto
