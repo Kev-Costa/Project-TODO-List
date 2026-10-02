@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List - Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Gerenciador de Tarefas</h1>
+
+    <!-- Form para Criar tarefa/editar -->
+    <form id="task-form">
+      <input type="hidden" id="task-id">
+
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="descricao">Descriçao:</label>
+        <input type="text" id="descricao" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dataTermino">Data Termino:</label>
+          <input type="date" id="dataTermino" required>
+        </div>
+
+        <div class="form-group">
+          <label for="prioridade">Prioridade (1 a 5):</label>
+          <input type="number" id="prioridade" min="1" max="5" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <input type="text" id="categoria" required>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status">
+            <option value="TODO">TODO</option>
+            <option value="DOING">DOING</option>
+            <option value="DONE">DONE</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" id="btn-save">Salvar Tarefa</button>
+      <button type="button" id="btn-cancel" class="hidden">Cancelar Ediçao</button>
+    </form>
+
+    <!-- Contadores de Status -->
+    <div class="counters">
+      <span>TODO: <strong id="count-todo">0</strong></span>
+      <span>DOING: <strong id="count-doing">0</strong></span>
+      <span>DONE: <strong id="count-done">0</strong></span>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filters">
+      <label>FIltrar por Status</label>
+      <button class="btn-filter active" data-filter="ALL">Todos</button>
+      <button class="btn-filter" data-filter="TODO">TODO</button>
+      <button class="btn-filter" data-filter="DOING">DOING</button>
+      <button class="btn-filter" data-filter="DONE">DONE</button>
+    </div>
+
+    <!-- Tabela de Tarefas -->
+    <table>
+      <thead>
+        <tr>
+          <th>Prioridade</th>
+          <th>Nome</th>
+          <th>Descriçao</th>
+          <th>Categoria</th>
+          <th>Termino</th>
+          <th>Status</th>
+          <th>Açoes</th>
+        </tr>
+      </thead>
+      <tbody id="task-list">
+          <!-- Tarefas adicionadas pelo JavaSricpt -->
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
